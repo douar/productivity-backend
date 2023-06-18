@@ -1,0 +1,6 @@
+POST http://localhost:3000/prodcutivity/budget/newCategory
+Content-Type: application/json
+
+{
+  "categoryName": "newCategory"
+}

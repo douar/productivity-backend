@@ -1,11 +1,24 @@
 package douarmoua.productivitybackend.Controllers;
 
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import douarmoua.productivitybackend.Entities.BudgetCategory;
+import douarmoua.productivitybackend.Services.BudgetService;
+import douarmoua.productivitybackend._DTOs.NewBudgetCategoryRequestDTO;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/prodcutivity/budget")
 @CrossOrigin
 public class BudgetController {
+
+    BudgetService budgetService;
+
+    public BudgetController (BudgetService budgetService){
+        this.budgetService = budgetService;
+    }
+
+    @PostMapping("/newCategory")
+    public BudgetCategory newBudgetCategory(@RequestBody NewBudgetCategoryRequestDTO requestDTO){
+        return this.budgetService.newBudgetCategory(requestDTO);
+    }
+
 }
