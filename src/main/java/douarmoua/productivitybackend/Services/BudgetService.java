@@ -15,6 +15,9 @@ public class BudgetService {
         this.budgetCategoryRepository = budgetCategoryRepository;
     }
 
+    public Iterable<BudgetCategory> getBudgetCategoryList(){
+        return this.budgetCategoryRepository.findAll();
+    }
     public BudgetCategory newBudgetCategory(NewBudgetCategoryRequestDTO requestDTO) {
         BudgetCategory newBudgetCategory = new BudgetCategory();
         newBudgetCategory.setCategoryName(requestDTO.categoryName);

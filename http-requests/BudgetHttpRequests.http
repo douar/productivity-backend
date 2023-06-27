@@ -1,6 +1,10 @@
-POST http://localhost:3000/prodcutivity/budget/newCategory
+POST http://localhost:3000/productivity/budget/newCategory
 Content-Type: application/json
 
 {
-  "categoryName": "newCategory"
+  "categoryName": "Car"
 }
+
+###
+GET http://localhost:3000/productivity/budget/categories
+Accept: application/json

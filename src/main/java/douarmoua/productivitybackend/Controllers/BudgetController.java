@@ -6,7 +6,7 @@ import douarmoua.productivitybackend._DTOs.NewBudgetCategoryRequestDTO;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("/prodcutivity/budget")
+@RequestMapping("/productivity/budget")
 @CrossOrigin
 public class BudgetController {
 
@@ -14,6 +14,11 @@ public class BudgetController {
 
     public BudgetController (BudgetService budgetService){
         this.budgetService = budgetService;
+    }
+
+    @GetMapping("/categories")
+    public Iterable<BudgetCategory> getBudgetCategoryList(){
+        return this.budgetService.getBudgetCategoryList();
     }
 
     @PostMapping("/newCategory")
