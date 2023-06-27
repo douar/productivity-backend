@@ -1,5 +1,5 @@
 ###
-POST http://localhost:3000/account
+POST http://localhost:3000/productivity/account
 Content-Type: application/json
 
 {
@@ -9,3 +9,7 @@ Content-Type: application/json
   "lastName": "lastname",
   "username": "user"
 }
+
+###
+GET http://localhost:3000/productivity/account?username=user&password=pass
+Content-Type: application/json
