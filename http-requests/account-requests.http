@@ -13,3 +13,11 @@ Content-Type: application/json
 ###
 GET http://localhost:3000/productivity/account?username=user&password=pass
 Content-Type: application/json
+
+###
+GET http://localhost:3000/productivity/account/all
+Content-Type: application/json
+
+###
+DELETE http://localhost:3000/productivity/account?accountId=deceee25-cece-42b0-b796-b998ca43ec90
+Content-Type: application/json
