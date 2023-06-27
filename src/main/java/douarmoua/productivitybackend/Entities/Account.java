@@ -8,12 +8,15 @@ public class Account {
     @GeneratedValue(strategy = GenerationType.UUID)
     private String id;
 
+    @Column (nullable = false)
     private String firstName;
+    @Column (nullable = false)
     private String lastName;
-    @Column (unique = true)
+    @Column (unique = true, nullable = false)
     private String email;
-    @Column (unique = true)
+    @Column (unique = true, nullable = false)
     private String username;
+    @Column (nullable = false)
     private String password;
 
     public Account() {

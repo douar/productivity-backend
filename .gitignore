@@ -36,4 +36,8 @@ out/
 ### VS Code ###
 .vscode/
 
+### Database ###
 /productivity-backend-database/productivity-backend-database
+
+###
+.idea/httpRequests
