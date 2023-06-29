@@ -8,7 +8,6 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.server.ResponseStatusException;
 
 import java.util.Optional;
-import java.util.OptionalInt;
 
 @Service
 public class AccountService {
@@ -51,6 +50,38 @@ public class AccountService {
             throw new ResponseStatusException(HttpStatus.NOT_FOUND);
         } else {
             this.accountRepository.deleteById(accountId);
+        }
+    }
+
+    // -- EDIT ACCOUNT -- //
+    public void updateAccount(NewAccountRequestDTO requestDTO, String accountId){
+        Optional<Account> accountOptional = this.accountRepository.findById(accountId);
+        if(accountOptional.isEmpty()){
+            throw new ResponseStatusException(HttpStatus.NOT_FOUND);
+        } else {
+            Account account = accountOptional.get();
+
+            if(requestDTO.firstName != null){
+                account.setFirstName(requestDTO.firstName);
+            }
+
+            if(requestDTO.lastName != null){
+                account.setLastName(requestDTO.lastName);
+            }
+
+            if(requestDTO.username != null){
+                account.setUsername(requestDTO.username);
+            }
+
+            if(requestDTO.password != null){
+                account.setPassword(requestDTO.password);
+            }
+
+            if(requestDTO.email != null){
+                account.setEmail(requestDTO.email);
+            }
+
+            this.accountRepository.save(account);
         }
     }
 

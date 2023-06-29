@@ -21,3 +21,12 @@ Content-Type: application/json
 ###
 DELETE http://localhost:3000/productivity/account?accountId=deceee25-cece-42b0-b796-b998ca43ec90
 Content-Type: application/json
+
+###
+PUT http://localhost:3000/productivity/account?accountId=56d3a5cf-ae0a-435c-ba0f-15dae031826b
+Content-Type: application/json
+
+{
+  "email": "newnew@gmail.com",
+  "password": "new password"
+}

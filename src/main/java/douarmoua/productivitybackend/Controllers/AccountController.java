@@ -35,4 +35,9 @@ public class AccountController {
         this.accountService.deleteAccount(accountId);
     }
 
+    @PutMapping
+    public void updateAccount(@RequestBody NewAccountRequestDTO requestDTO, @RequestParam String accountId){
+        this.accountService.updateAccount(requestDTO, accountId);
+    }
+
 }
