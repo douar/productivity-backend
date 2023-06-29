@@ -40,4 +40,4 @@ out/
 /productivity-backend-database/productivity-backend-database
 
 ###
-.idea/httpRequests
+.idea\httpRequests

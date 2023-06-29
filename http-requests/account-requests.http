@@ -3,11 +3,11 @@ POST http://localhost:3000/productivity/account
 Content-Type: application/json
 
 {
-  "email": "test@gmail.com",
-  "password": "pass",
-  "firstName": "firstname",
-  "lastName": "lastname",
-  "username": "user"
+  "email": "a@gmail.com",
+  "password": "a",
+  "firstName": "a",
+  "lastName": "a",
+  "username": "a"
 }
 
 ###
