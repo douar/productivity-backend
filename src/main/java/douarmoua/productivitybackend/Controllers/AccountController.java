@@ -25,11 +25,6 @@ public class AccountController {
         return this.accountService.loginAccount(username, password);
     }
 
-//    @GetMapping("/all")
-//    public Iterable<Account> accounts(){
-//        return this.accountService.getAllAccounts();
-//    }
-
     @DeleteMapping
     public void deleteAccount(@RequestParam String accountId){
         this.accountService.deleteAccount(accountId);

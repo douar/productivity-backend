@@ -38,11 +38,6 @@ public class AccountService {
         return accountOptional.get();
     }
 
-    // -- GET ALL ACCOUNTS -- //
-    public Iterable<Account> getAllAccounts() {
-        return this.accountRepository.findAll();
-    }
-
     // -- DELETE ACCOUNT -- //
     public void deleteAccount(String accountId) {
         Optional<Account> accountOptional = this.accountRepository.findById(accountId);
@@ -53,7 +48,7 @@ public class AccountService {
         }
     }
 
-    // -- EDIT ACCOUNT -- //
+    // -- UPDATE ACCOUNT -- //
     public void updateAccount(NewAccountRequestDTO requestDTO, String accountId){
         Optional<Account> accountOptional = this.accountRepository.findById(accountId);
         if(accountOptional.isEmpty()){
